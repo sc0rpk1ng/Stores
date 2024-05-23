@@ -16,3 +16,5 @@ CREATE TABLE [sales].[order_items] (
 		REFERENCES [production].[products] ([product_id])
 	 ON DELETE CASCADE ON UPDATE CASCADE
 ) ON [PRIMARY]
+CREATE STATISTICS [_WA_Sys_00000003_37A5467C]
+ON [sales].[order_items] ([product_id])

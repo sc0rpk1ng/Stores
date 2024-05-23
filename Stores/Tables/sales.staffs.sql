@@ -10,6 +10,7 @@ CREATE TABLE [sales].[staffs] (
 	[active] tinyint NOT NULL,
 	[store_id] int NOT NULL,
 	[manager_id] int,
+	[address] nvarchar(max) COLLATE SQL_Latin1_General_CP1_CI_AS,
 	PRIMARY KEY([staff_id]) WITH (FILLFACTOR=100) ON [PRIMARY],
 	UNIQUE([email]) WITH (FILLFACTOR=100) ON [PRIMARY],
 	FOREIGN KEY ([manager_id])
@@ -19,3 +20,4 @@ CREATE TABLE [sales].[staffs] (
 		REFERENCES [sales].[stores] ([store_id])
 	 ON DELETE CASCADE ON UPDATE CASCADE
 ) ON [PRIMARY]
+ TEXTIMAGE_ON [PRIMARY]
