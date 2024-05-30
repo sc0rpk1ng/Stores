@@ -18,8 +18,6 @@ CREATE TABLE [production].[products] (
 		REFERENCES [production].[categories] ([category_id])
 	 ON DELETE CASCADE ON UPDATE CASCADE
 ) ON [PRIMARY]
-CREATE STATISTICS [_WA_Sys_00000002_267ABA7A]
-ON [production].[products] ([product_name])
 CREATE STATISTICS [_WA_Sys_00000003_267ABA7A]
 ON [production].[products] ([brand_id])
 CREATE STATISTICS [_WA_Sys_00000004_267ABA7A]
